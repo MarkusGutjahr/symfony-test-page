@@ -26,7 +26,7 @@
             <h1 class="title">My Symfony Test Page</h1>
             <div class="profileBox">
                 <div class="avatar"><?php echo $_SESSION['username'][0]; ?></div>
-                <div class="username"><?php echo $_SESSION['username']; ?></div>
+                <div class="username">{{ app.user.username }}</div>
                 <a class="logoutButton" href="{{ app.user ? 'logout' : 'login' }}">
                     <img src="{{ asset(app.user ? 'images/darkmode/logout.svg' : 'images/darkmode/person.svg') }}"
                          alt="{{ app.user ? 'Logout' : 'Login' }}">
