@@ -1,0 +1,172 @@
+body {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+    background: #202020;
+    color: #ffffff;
+    margin: 0;
+}
+
+.footer {
+    position: absolute;
+    text-align: center;
+    font-size: 1vh;
+    padding: 1vw;
+    bottom: 0;
+    right: 0;
+}
+
+.main {
+    display: flex;
+    margin-top: 8vh;
+}
+
+.menu {
+    width: 20%;
+    background: #151515;
+    margin-right: 1vw;
+    border-bottom-right-radius: 3vw;
+}
+
+.menu a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 2vh;
+    color: #ffffff;
+    padding: 8px;
+}
+
+.menu img {
+    margin-right: 8px;
+}
+
+.menu a:hover {
+    background: #202020CC;
+}
+
+.content {
+    width: 80%;
+    box-shadow: 2px 2px 2px 2px #00000055;
+    border-radius: 1vw;
+    padding: 1vw;
+    margin-top: 1vh;
+    margin-right: 2vw;
+}
+
+.menu-bar {
+    display: flex;
+    position: absolute;
+    background: #151515;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 8vh;
+    box-shadow: 2px 2px 2px #00000055;
+    padding-left: 2vw;
+    justify-content: space-between;
+}
+
+.avatar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    background: darkslateblue;
+    padding: 1vw;
+    width: 1vw;
+    height: 1vw;
+    margin-right: 0.5vw;
+}
+
+.username {
+    margin-right: 1vw;
+}
+
+.title {
+
+}
+
+.profileBox {
+    display: flex;
+    margin-right: 1vw;
+    align-items: center;
+}
+
+.contact {
+    position: relative;
+    background: #00000022;
+    margin-bottom: 1vh;
+    border-radius: 1vw;
+    padding: 8px 8px 8px 5vw;
+}
+
+.profile-picture {
+    position: absolute;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    left: 1vw;
+}
+
+.callButton {
+    position: absolute;
+    background: darkslateblue;
+    padding: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    right: 1vw;
+    top: 1vw;
+}
+
+.callButton:hover {
+    background: mediumslateblue;
+}
+
+.deleteButton {
+    position: absolute;
+    background: darkred;
+    padding: 4px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    right: 6vw;
+    top: 1vw;
+}
+
+.deleteButton:hover {
+    background: indianred;
+}
+
+.logoutButton {
+    display: inline-block;
+    width: 2vw;
+    height: 2vw;
+    background-size: contain;
+}
+
+.logoutButton img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
+.form-container {
+    background-color: #151515;
+    display: inline-block;
+    padding: 2vw;
+    box-shadow: 2px 2px 2px #00000055;
+    border-radius: 1vw;
+}
+
+.form-outer-container {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

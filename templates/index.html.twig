@@ -1,0 +1,16 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <div class="main">
+
+        <div class="menu">
+            <a href="{{ path('index', { page: 1 }) }}"><img src="{{ asset('images/darkmode/home.svg') }}" /> Start</a>
+            <a href="{{ path('index', { page: 1 }) }}"><img src="{{ asset('images/darkmode/menu_book.svg') }}" /> Contacts</a>
+            <a href="{{ path('index', { page: 1 }) }}"><img src="{{ asset('images/darkmode/add_circle.svg') }}" /> Add Contact</a>
+            <a href="{{ path('index', { page: 1 }) }}"><img src="{{ asset('images/darkmode/policy.svg') }}" /> Company Details</a>
+        </div>
+
+    </div>
+
+{% endblock %}

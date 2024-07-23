@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+    <div class="container">
+        <h1>Contact Book</h1>
+        {% include "messages.html.twig" %}
+        {{ form(contactBookForm) }}
+
+        {% for entry in entries %}
+            {% include "entry.html.twig" %}
+        {% endfor %}
+
+        {% if maxPages > 1 %}
+            {% include "pagination.html.twig" %}
+        {% endif %}
+    </div>
+{% endblock %}
