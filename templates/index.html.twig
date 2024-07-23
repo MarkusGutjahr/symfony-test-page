@@ -2,15 +2,11 @@
 
 {% block body %}
 
-    <div class="main">
-
-        <div class="menu">
-            <a href="{{ path('index', { page: 1 }) }}"><img src="{{ asset('images/darkmode/home.svg') }}" /> Start</a>
-            <a href="{{ path('index', { page: 1 }) }}"><img src="{{ asset('images/darkmode/menu_book.svg') }}" /> Contacts</a>
-            <a href="{{ path('index', { page: 1 }) }}"><img src="{{ asset('images/darkmode/add_circle.svg') }}" /> Add Contact</a>
-            <a href="{{ path('index', { page: 1 }) }}"><img src="{{ asset('images/darkmode/policy.svg') }}" /> Company Details</a>
+        <div class="container mt-3 mx-0">
+            <div class="d-flex flex-column align-items-start">
+                <h2>Welcome</h2>
+                <p>You are on the main page</p>
+            </div>
         </div>
-
-    </div>
 
 {% endblock %}

@@ -19,26 +19,55 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}
-        {% endblock %}
+        <div class="main"></div>
 
-        <div class="menu-bar">
-            <h1 class="title">My Symfony Test Page</h1>
-            <div class="profileBox">
-                <div class="avatar"><?php echo $_SESSION['username'][0]; ?></div>
-                <div class="username">{{ app.user.username }}</div>
-                <a class="logoutButton" href="{{ app.user ? 'logout' : 'login' }}">
-                    <img src="{{ asset(app.user ? 'images/darkmode/logout.svg' : 'images/darkmode/person.svg') }}"
-                         alt="{{ app.user ? 'Logout' : 'Login' }}">
-                </a>
+            <div class="menu-bar">
+                <h1 class="title">
+                    <a href="{{ path('index') }}">Symfony Test Page</a>
+                </h1>
+                <div class="profileBox">
+                    <div class="avatar"></div>
+                    {% if app.user %}
+                        <div class="username">{{ app.user.username }}</div>
+                    {% endif %}
+                    <a class="logoutButton" href="{{ app.user ? 'logout' : 'login' }}">
+                        <img src="{{ asset(app.user ? 'images/darkmode/logout.svg' : 'images/darkmode/person.svg') }}"
+                             alt="{{ app.user ? 'Logout' : 'Login' }}">
+                    </a>
+                </div>
+            </div>
+
+        <div class="container-fluid d-flex flex-grow-1 p-0">
+            <div class="d-flex flex-column" style="width: 17vw;">
+                <div class="menu p-0">
+                    <a href="{{ path('index')}}" class="d-block mb-2">
+                        <img src="{{ asset('images/darkmode/home.svg') }}" alt="Home" />
+                        Start
+                    </a>
+                    <a href="{{ path('app_contacts')}}" class="d-block mb-2">
+                        <img src="{{ asset('images/darkmode/menu_book.svg') }}" alt="Contacts" />
+                        Contacts
+                    </a>
+                    <a href="{{ path('app_add_contact')}}" class="d-block mb-2">
+                        <img src="{{ asset('images/darkmode/add_circle.svg') }}" alt="Add Contact" />
+                        Add Contact
+                    </a>
+                    <a href="{{ path('index')}}" class="d-block mb-2">
+                        <img src="{{ asset('images/darkmode/policy.svg') }}" alt="Company Details" />
+                        Company Details
+                    </a>
+                </div>
+            </div>
+            <div class="flex-grow-1 p-0">
+                {% block body %}{% endblock %}
             </div>
         </div>
 
 
-        <div class="footer ">
-            <img src="{{ asset('images/darkmode/copyright.svg') }}" alt="copyright-image" />
-            2024 Test Page
+            <div class="footer ">
+                <img src="{{ asset('images/darkmode/copyright.svg') }}" alt="copyright-image" />
+                2024 Test Page
+            </div>
         </div>
-
     </body>
 </html>
