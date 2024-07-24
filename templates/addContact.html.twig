@@ -9,4 +9,22 @@
         </div>
     </div>
 
+
+    {{ form_start(form) }}
+    <div>
+        {{ form_widget(form.name) }}
+    </div>
+    <div>
+        {{ form_widget(form.phone) }}
+    </div>
+    <div>
+        {{ form_widget(form.email) }}
+    </div>
+    <div>
+        {{ form_widget(form.body) }}
+    </div>
+    <button type="submit">Submit</button>
+    {{ form_end(form) }}
+
+
 {% endblock %}

@@ -9,4 +9,21 @@
         </div>
     </div>
 
+    {% for contact in pagination %}
+        <div class='contact'>
+            <img class='profile-picture' src='{{ asset("img/person.svg") }}'>
+            <b>{{ contact.name }}</b><br>
+            {{ contact.phone }}
+            <a class='callButton' href='tel:{{ contact.phone }}'>Call</a>
+            <form action='{{ path("app_contacts_delete") }}' method='post'>
+                <input type='hidden' name='delete' value='{{ contact.id }}'>
+                <button class='deleteButton' type='submit'>Delete</button>
+            </form>
+        </div>
+    {% endfor %}
+
+    <div class="pagination">
+        {{ knp_pagination_render(pagination) }}
+    </div>
+
 {% endblock %}
