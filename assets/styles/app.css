@@ -177,3 +177,21 @@ body {
     text-decoration: none;
 }
 
+.custom-pagination {
+    /* Your custom styles here */
+}
+
+.custom-pagination .page-item.active .page-link {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+    color: white;
+}
+
+.custom-pagination .page-link {
+    color: #4CAF50;
+}
+
+.custom-pagination .page-link:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+}
